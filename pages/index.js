@@ -1,10 +1,10 @@
-
+import Navbar from "@/components/header/navbar/Navbar";
 
 export default function Home() {
   return (
     <>
      
-      <h1>manan jan </h1>
+      <Navbar />
       
     </>
   );
