@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./MainMenu.module.css";
 import Link from "next/link";
 import { RxCaretDown } from "react-icons/rx";
+import SubMenu from "../subMenu/SubMenu";
 
 const MainMenu = () => {
+  const [showSubMenu, setShowSubMenu] = useState(false);
   return (
     <div className={styles.menu}>
       <div className="container">
         <ul>
-          <li>
+          <li
+            onMouseEnter={() => setShowSubMenu(true)}
+            onMouseLeave={() => setShowSubMenu(false)}
+          >
             <Link href="/products/laptops">لپ تاپ</Link>
             <RxCaretDown />
-            <div className="subMenu">
-              <div className="container">
-                <li>
-                  <Link href='/products/laptops/asus'>asus</Link>
-                </li>
-              </div>
-            </div>
+            {showSubMenu && <SubMenu />}
           </li>
           <li>
             <Link href="/products/mobiles">موبایل</Link>
