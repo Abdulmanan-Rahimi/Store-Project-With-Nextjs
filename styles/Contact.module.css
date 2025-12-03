@@ -1,6 +1,7 @@
 .contactContainer {
   font-size: 14px;
   color: rgb(107, 106, 106);
+  margin-top: 20px;
 }
 
 .contactContainer h3 ,
@@ -35,8 +36,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: -26px;
-  margin: 10px 0;
+  /* padding: -26px; */
+  margin: 10px 20px;
+  /* background-color: red; */
 }
 
 .contactBox p {
