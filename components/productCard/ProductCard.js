@@ -12,9 +12,13 @@ const ProductCard = ({ image, text, price }) => {
       </div>
       <div className={styles.cardFooter}>
         <button>افزودن به سبد خرید</button>
-        <p>{price.toLocaleString(<div className="col">
-          <ProductCard />
-        </div>)}</p>
+        <p>
+          {price.toLocaleString(
+            <div className="col">
+              <ProductCard />
+            </div>
+          )}
+        </p>
       </div>
     </div>
   );
