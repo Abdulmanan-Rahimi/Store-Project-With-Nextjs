@@ -3,6 +3,7 @@ import Navbar from "@/components/header/navbar/Navbar";
 import ProductCard from "@/components/productCard/ProductCard";
 import db from "../data/db.json";
 
+
 export default function Home() {
   return (
     <div className="container">
