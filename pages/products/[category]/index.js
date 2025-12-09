@@ -7,7 +7,11 @@ import styles from "@/styles/ProductsByCategory.module.css";
 const ProductsByCategory = () => {
   const { category } = useRouter().query;
   const [products, setProducts] = useState(db[category]);
-  const [searchKey, setSearchKey] = useState(null);
+  const [searchKey, setSearchKey] = useState("");
+  useEffect(() => {
+    setProducts(db[category]);
+    setSearchKey("");
+  }, [category]);
 
   useEffect(() => {
     if (searchKey) {
@@ -28,6 +32,7 @@ const ProductsByCategory = () => {
           type="text"
           placeholder="دنبال چی میگردی؟"
           className={styles.search}
+          value={searchKey}
         ></input>
       </div>
 
