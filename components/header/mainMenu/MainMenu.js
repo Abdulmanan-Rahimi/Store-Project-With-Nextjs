@@ -31,7 +31,7 @@ const MainMenu = () => {
             <RxCaretDown />
           </li>
           <li>
-            <Link href="/products/laptops">کنسول و بازی</Link>
+            <Link href="/products/consoles">کنسول و بازی</Link>
             <RxCaretDown />
           </li>
         </ul>
